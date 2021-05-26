@@ -1,132 +1,159 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="./css/base.css">
-    <link rel="stylesheet" href="./css/index.css">
+    <link rel="icon" href="./images/favicon.ico"/>
+    <link rel='stylesheet' href='./stylesheets/index.css' />
 </head>
-
 <body>
-    <section id="page1" class="show">
-        <nav>
-            <div class="logo">
-                <a href="#">Home</a>
-            </div>
-            <div class="nav" id="nav">
-                <div><a href="javascript:void(0)">我的主页</a><span></span></div>
-                <div><a href="javascript:void(0)">个人简介</a><span></span></div>
-                <div><a href="javascript:void(0)">工作经历</a><span></span></div>
-                <div><a href="javascript:void(0)">掌握技能</a><span></span></div>
-                <div><a href="javascript:void(0)">我的相册</a><span></span></div>
-            </div>
-        </nav>
-        <main>
-            <div class="portrait">
-                <img src="./img/portrait.jpg" alt="">
-            </div>
-            <div class="aphorism">
-                <span>无论黑夜怎样漫长，白昼总会到来</span>
-            </div>
-            <div class="line"></div>
-            <div class="info">
-                <span>吴勇进</span>
-                <span>前端开发工程师</span>
-                <span>求职&nbsp;&nbsp;深圳 / 广州</span>
-            </div>
-        </main>
-    </section>
-
-    <section id="page2">
-        <div class="title">
-            <span>个人简介</span>
+<section id="home" class="page">
+    <div class="head">
+        <div class="left">
+            <span>Home</span>
         </div>
-        <div class="aphorism-text">
-            <span>我自是年少，韶华倾负</span>
+        <div class="right">
+            <div class="item">首页</div>
+            <div class="item">个人简介</div>
+            <div class="item">专业技能</div>
+            <div class="item">项目展示</div>
+            <div class="item">工作经历</div>
+            <div class="item">项目经历</div>
         </div>
-        <div class="intro">
-            <img src="./img/portrait.jpg" alt="">
-            <table>
-                <tr>
-                    <td>姓名</td><td>|</td><td>吴勇进</td>
-                </tr>
-                <tr>
-                    <td>性别</td><td>|</td><td>男</td>
-                </tr>
-                <tr>
-                    <td>出生</td><td>|</td><td>1992.05</td>
-                </tr>
-                <tr>
-                    <td>居住</td><td>|</td><td>广东深圳</td>
-                </tr>
-                <tr>
-                    <td>学历</td><td>|</td><td>大专</td>
-                </tr>
-                <tr>
-                    <td>专业</td><td>|</td><td>计算机网络技术</td>
-                </tr>
-            </table>
-            <table>
-                <tr>
-                    <td>手机</td><td>|</td><td>15070695938</td>
-                </tr>
-                <tr>
-                    <td>邮箱</td><td>|</td><td>linghun_wu@163.com</td>
-                </tr>
-                <tr>
-                    <td>QQ号</td><td>|</td><td>1031455193</td>
-                </tr>
-                <tr>
-                    <td>户籍</td><td>|</td><td>江西吉安</td>
-                </tr>
-                <tr>
-                    <td>学校</td><td>|</td><td>江西信息学院</td>
-                </tr>
-                <tr>
-                    <td>英语</td><td>|</td><td>英语三级</td>
-                </tr>
-            </table>
-        </div>
-    </section>
-    <section id="page3">
-        <div class="title">
-            <span>工作经验</span>
-        </div>
-        <div class="aphorism-text">
-            <span>优秀的判断力来自经验，但经验来自于错误的判断</span>
-        </div>
-    </section>
-    <section id="page4">
-        <div class="title">
-            <span>掌握技能</span>
-        </div>
-        <div class="aphorism-text">
-            <span>如果debugging是一种消灭bug的过程,那编程就一定是把bug放进去的过程。</span>
-        </div>
-    </section>
-    <section id="page5">
-        <div class="title">
-            <span>我的相册</span>
-        </div>
-        <div class="aphorism-text">
-            <span>提笔写忧伤，落笔映惆怅</span>
-        </div>
-    </section>
-    <div id="nextPage">
-        <span></span>
     </div>
-    <div id="pagination">
-        <!-- <a href="#"><span>首页</span></a>
-        <a href="#"><span>个人简历</span></a>
-        <a href="#"><span>工作经验</span></a>
-        <a href="#"><span>掌握技能</span></a>
-        <a href="#"><span>我的相册</span></a> -->
+    <div class="main">
+        <div class="avatar">
+            <img src="./images/index/avatar.jpg" alt="">
+        </div>
+        <div class="aphorism">
+            <span>无论黑夜怎样漫长，白昼总会到来</span>
+        </div>
+        <div class="line"></div>
+        <div class="info">
+            <div class="text1">吴勇进</div>
+            <div class="text2">前端开发工程师</div>
+            <div class="text3">求职&nbsp;&nbsp;深圳 / 广州</div>
+        </div>
     </div>
+</section>
 
+<section id="about" class="page active">
+    <div class="title">
+        <span>个人简介</span>
+    </div>
+    <div class="aphorism">
+        <span>我自是年少，韶华倾负</span>
+    </div>
+    <div class="content">
+        <div class="left">
+            <div class="item-title">关于</div>
+            <div class="item">
+                <span>嗨！ 我是吴勇进，一名web前端开发工程师。</span>
+                <br><br>
+                <span>从事前端开发大概也三四年了，主页负责一些管理后台、小程序、H5活动页以及app混合页面开发。</span>
+                <br>
+                <span>主要以vue开发为主，微信小程序也比较熟悉，另外原生js、Jquery、css3等开发也比较了解。</span>
+                <br>
+                <span>目前正在学习node，这个网站也是在学习中开发的。</span>
+                <br>
+                <span>喜欢思考，求知欲望强烈，勇于探索。。。</span>
+            </div>
+        </div>
+        <div class="right">
+            <div class="item-title">基本信息</div>
+            <div class="item">
+                <strong class="label">性别</strong>
+                <i>|</i>
+                <span class="value">男</span>
+            </div>
+            <div class="item">
+                <strong class="label">籍贯</strong>
+                <i>|</i>
+                <span class="value">江西</span>
+            </div>
+            <div class="item">
+                <strong class="label">手机</strong>
+                <i>|</i>
+                <span class="value">15070695938</span>
+            </div>
+            <div class="item">
+                <strong class="label">微信</strong>
+                <i>|</i>
+                <span class="value">W1031455193</span>
+            </div>
+            <div class="item">
+                <strong class="label">邮箱</strong>
+                <i>|</i>
+                <span class="value">linghun_wu@163.com</span>
+            </div>
+            <div class="item">
+                <strong class="label">学历</strong>
+                <i>|</i>
+                <span class="value">大专</span>
+            </div>
+            <div class="item">
+                <strong class="label">专业</strong>
+                <i>|</i>
+                <span class="value">计算机网络技术</span>
+            </div>
+        </div>
+    </div>
+    <div class="mask">
+        <div class="pattern1"></div>
+        <div class="pattern2"></div>
+        <div class="pattern3"></div>
+        <div class="pattern4"></div>
+        <div class="pattern5"></div>
+        <div class="pattern6"></div>
+    </div>
+</section>
 
+<section id="skill" class="page">
+    <div class="title">
+        <span>专业技能</span>
+    </div>
+    <div class="aphorism">
+        <span>如果debugging是一种消灭bug的过程,那编程就一定是把bug放进去的过程。</span>
+    </div>
+</section>
+
+<section id="portfolio" class="page">
+    <div class="title">
+        <span>项目展示</span>
+    </div>
+    <div class="aphorism">
+        <span>只有千锤百炼，才能成为好钢</span>
+    </div>
+</section>
+
+<section id="work" class="page">
+    <div class="title">
+        <span>工作经历</span>
+    </div>
+    <div class="aphorism">
+        <span>优秀的判断力来自经验，但经验来自于错误的判断</span>
+    </div>
+</section>
+
+<section id="project" class="page">
+    <div class="title">
+        <span>项目经历</span>
+    </div>
+    <div class="aphorism">
+        <span>城市是一本打开的书，从中可以看到它的抱负</span>
+    </div>
+</section>
+
+<aside id="pagination">
+    <div><span>首页</span></div>
+    <div><span>个人简介</span></div>
+    <div><span>专业技能</span></div>
+    <div><span>项目展示</span></div>
+    <div><span>工作经历</span></div>
+    <div><span>项目经历</span></div>
+</aside>
+
+<script src="./javascripts/index.js"></script>
 </body>
-
 </html>
-<script src="./js/index.js"></script>

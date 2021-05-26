@@ -1,0 +1,313 @@
+body {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    font-family: "宋体";
+    background-color: #F3F2F2;
+}
+/* 下一页按钮 */
+#nextPage {
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+    position: fixed;
+    border: 1px solid #fff;
+    bottom: 4%;
+    left: 50%;
+    margin-left: -2rem;
+    cursor: pointer;
+}
+#nextPage span {
+    width: 18px;
+    height: 18px;
+    display: block;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-top: -9px;
+    margin-left: -9px;
+    background: url('../img/sprite_img.png') no-repeat -66px -16px;
+}
+
+section {
+    display: none;
+}
+.show {
+    display: block;
+}
+.hide {
+    display: none;
+}
+/* 分页器 */
+#pagination {
+    padding: 10px;
+    position: fixed;
+    right: 50px;
+    top:50%;
+}
+#pagination a {
+    display: block;
+    position: relative;
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background-color: #d9d9d9;
+    cursor: pointer;
+    margin: 20px 0;
+}
+#pagination a span {
+    position: absolute;
+    width: 4em;
+    text-align: right;
+    right: 20px;
+    bottom:0px;
+    color: skyblue;
+    font-family: 'youyuan';
+    font-size: 1.6rem;
+    display: none;
+    transition: all 1s;
+}
+#pagination a:hover span {
+    display: block;
+}
+
+
+/* 首页 */
+section#page1 {
+    width: 100%;
+    height: 100%;
+    transform: scale(2);
+    background: url('../img/bg1.png') no-repeat center/cover;
+    animation: page1 0.8s forwards;
+}
+@keyframes page1 {
+    from {}
+    to {
+        transform: scale(1);
+    }
+}
+
+
+/* 首页导航条 */
+#page1 nav {
+    width: 80%;
+    padding:  2.4rem 10%;
+    display: flex;
+}
+#page1 nav .logo {
+    flex: 1;
+}
+#page1 nav .logo a {
+    font-size: 5rem;
+    color: #fff;
+}
+
+#page1 nav .nav {
+    height: 100%;
+    flex: 1;
+    display: flex;
+    font-size: 1.5rem;
+    text-align: center;
+}
+#page1 nav .nav div {
+        height: 100%;
+        padding: 1.6rem 0;
+        flex: 1;
+        position: relative;
+}
+#page1 nav .nav div a {
+    width: 100%;
+    display: block;
+    color: #fff;
+    transition: all 2s;
+}
+#page1 nav .nav div span {
+    width: 0%;
+    height: 1px;
+    position: absolute;
+    background-color: skyblue;
+    bottom: 5px;
+    left: 50%;
+    margin-left: -40%; 
+    transition: all 1s; 
+}
+#page1 main {
+    width: 50%;
+    margin: 0 auto;
+}
+#page1 main .portrait{
+    width: 100%;
+    margin: 5px auto;
+}
+#page1 main .portrait img {
+    width: 17%;
+    border-radius: 50%;
+    margin:  0 auto;
+    display: block;
+    transform: rotateZ(0deg);
+    animation: portraitImg 5s 1s infinite linear;
+}
+@keyframes portraitImg {
+    from{}
+    to{
+        transform: rotate(360deg);
+    }
+}
+#page1 main .aphorism{
+    width: 100%;
+    text-align: center;
+    font-size: 3rem;
+    color: #fff;
+    margin-top: 6%;
+}
+#page1 main .line {
+    width: 0%;
+    background-color: #fff;
+    height: 1px;
+    margin: 0 auto;
+    margin-top: 8px;
+    animation: line 2s 1s linear infinite alternate;
+}
+@keyframes line{
+    from{}
+    to{
+        width: 80%;
+    }
+}
+
+#page1 main .info{
+    width: 100%;
+    text-align: center;
+    font-size: 1.8rem;
+    color: #fff;
+}
+#page1 main .info span {
+    display: block;
+    margin-top: 5%;
+}
+
+/* 第二页 */
+#page2,
+#page3,
+#page4,
+#page5 {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    color: #333;
+    transform: translateY(0rem);
+    opacity: 1;
+    animation: page 1s linear reverse;
+}
+
+
+@keyframes page {
+    from{}
+    to{
+        transform: translateY(5rem);
+        opacity: 0;
+    }
+}
+
+
+#page2 div,
+#page3 div,
+#page4 div,
+#page5 div {
+    width: 80%;
+    margin: 0 10%;
+}
+#page2 .title,
+#page3 .title,
+#page4 .title,
+#page5 .title {
+    font-size: 3rem;
+    text-align: center;
+    padding: 3rem 0;
+    position: relative;
+    overflow: hidden
+}
+#page2 .title::before,
+#page3 .title::before,
+#page4 .title::before,
+#page5 .title::before {
+    content: "";
+    width: 100%;
+    border:1px dashed skyblue;
+    position: absolute;
+    left:0px;
+    bottom: 10px; 
+    animation: title-before 20s 1s infinite linear;
+}
+@keyframes title-before {
+    from{}
+    to{
+        width: 0px;
+    }
+}
+#page2 .title::after,
+#page3 .title::after,
+#page4 .title::after,
+#page5 .title::after {
+    content: "";
+    width: 20px;
+    height: 20px;
+    background: url('../img/sprite_img.png') no-repeat -37px -50px;
+    position: absolute;
+    left: 100%;
+    bottom: 0px;
+    animation: title-after 20s 1s infinite linear;
+}
+@keyframes title-after {
+    from{}
+    to{
+        left: 0;
+    }
+} 
+
+#page2 .aphorism-text,
+#page3 .aphorism-text,
+#page4 .aphorism-text,
+#page5 .aphorism-text {
+    text-align: center;
+    font-size: 2rem;
+    margin-top: 2rem;
+}
+#page2 .intro {
+    font-family: "youyuan";
+    padding: 20px 0;
+}
+#page2 .intro img {
+    width: 16rem;
+    height: 16rem;
+    border-radius: 50%;
+    margin-top: 4rem;
+    margin-left: 5rem;
+    margin-right: 9rem;
+    float: left;
+    animation: introImg 5s 1s infinite linear;
+}
+@keyframes introImg {
+    from{}
+    to{
+        transform: rotate(360deg);
+    }
+}
+#page2 .intro table {
+    width: 33.33%;
+    float: left;
+}
+#page2 .intro table td {
+    font-size: 1.8rem;
+}
+#page2 .intro table td:nth-of-type(1) {
+    padding: 15px 5px;
+    text-align: right;
+}
+#page2 .intro table td:nth-of-type(2) {
+    text-align: center;
+}
+#page2 .intro table td:nth-of-type(3) {
+    padding: 15px 5px;
+    text-align: left;
+}
